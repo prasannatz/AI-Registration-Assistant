@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Registration Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🤖 AI Registration Assistant</h1>
+            <p>Internship Registration Chatbot</p>
+        </div>
+
+        <div id="chatbox" class="chatbox">
+
+            <div class="message bot">
+                <div class="bubble">
+                    Hello! 👋 I'm your AI Registration Assistant.
+                    <br><br>
+                    I can help you complete your internship registration.
+                    <br><br>
+                    Type <strong>register</strong> to begin.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                autocomplete="off"
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+        <button class="reset-button" onclick="resetChat()">
+            🔄 Start New Registration
+        </button>
+
+    </div>
+
+
+    <script>
+
+        const input = document.getElementById("messageInput");
+        const chatbox = document.getElementById("chatbox");
+
+
+        input.addEventListener("keypress", function(event) {
+
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+
+        });
+
+
+        function addMessage(text, sender) {
+
+            const message = document.createElement("div");
+
+            message.className = "message " + sender;
+
+            const bubble = document.createElement("div");
+
+            bubble.className = "bubble";
+
+            bubble.innerHTML = text.replace(/\n/g, "<br>");
+
+            message.appendChild(bubble);
+
+            chatbox.appendChild(message);
+
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+
+        async function sendMessage() {
+
+            const message = input.value.trim();
+
+            if (!message) {
+                return;
+            }
+
+            addMessage(message, "user");
+
+            input.value = "";
+
+            try {
+
+                const response = await fetch("/chat", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        message: message
+                    })
+
+                });
+
+
+                const data = await response.json();
+
+                addMessage(data.response, "bot");
+
+            }
+
+            catch (error) {
+
+                addMessage(
+                    "Sorry, something went wrong. Please try again.",
+                    "bot"
+                );
+
+                console.error(error);
+            }
+        }
+
+
+        async function resetChat() {
+
+            await fetch("/reset", {
+                method: "POST"
+            });
+
+            chatbox.innerHTML = `
+                <div class="message bot">
+                    <div class="bubble">
+                        Registration restarted! 🔄
+                        <br><br>
+                        Please type <strong>register</strong> to begin.
+                    </div>
+                </div>
+            `;
+        }
+
+    </script>
+
+</body>
+</html>

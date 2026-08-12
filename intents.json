@@ -1,0 +1,63 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "hi",
+                "hello",
+                "hey",
+                "good morning",
+                "good afternoon",
+                "good evening",
+                "hi there",
+                "hello assistant"
+            ]
+        },
+        {
+            "tag": "register",
+            "patterns": [
+                "register",
+                "registration",
+                "I want to register",
+                "I want to apply",
+                "apply for internship",
+                "sign up",
+                "I want to join",
+                "how can I register",
+                "start registration"
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "help",
+                "I need help",
+                "can you help me",
+                "support",
+                "guide me",
+                "what can you do",
+                "I need assistance"
+            ]
+        },
+        {
+            "tag": "thank_you",
+            "patterns": [
+                "thank you",
+                "thanks",
+                "thank you so much",
+                "I appreciate it",
+                "thanks for your help"
+            ]
+        },
+        {
+            "tag": "bye",
+            "patterns": [
+                "bye",
+                "goodbye",
+                "see you",
+                "exit",
+                "quit"
+            ]
+        }
+    ]
+}
