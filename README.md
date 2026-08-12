@@ -1,23 +1,30 @@
 # 🤖 AI Registration Assistant
 
-## 📌 Project Overview
-The AI Registration Assistant is a chatbot designed to help students complete internship registration using NLP and Machine Learning.
+An AI-powered chatbot that helps users complete internship registration through a conversational interface.
 
-## 🚀 Features
-- Greeting & Introduction
-- Intent Recognition
-- Entity Extraction (Name, Email, Field, Experience)
-- Email Validation
-- Registration Confirmation
-- Web Interface using Flask
+---
+
+## 📌 Features
+
+- Interactive chatbot UI
+- Step-by-step registration flow
+- Name, email, and field collection
+- Programming experience selection
+- Registration confirmation system
+- Restart registration option
+
+---
 
 ## 🛠️ Technologies Used
+
 - Python
+- Flask
 - NLTK
 - Scikit-learn
-- Flask
 
-  ## 📂 Project Structure
+---
+
+## 📂 Project Structure
 
 ```
 AI-Registration-Assistant/
@@ -26,11 +33,13 @@ AI-Registration-Assistant/
 │── intent_classifier.py
 │── intents.json
 │── templates/
-│   └── index.html
+│    └── index.html
 │── static/
-│   └── style.css
+│    └── style.css
 │── README.md
 ```
+
+---
 
 ## ▶️ How to Run
 
@@ -39,31 +48,49 @@ AI-Registration-Assistant/
 pip install flask nltk scikit-learn
 ```
 
-2. Run the application:
+2. Run the app:
 ```
 python app.py
 ```
 
-3. Open in browser:
+3. Open browser:
 ```
 http://127.0.0.1:5000/
 ```
 
+---
 
-## 🎯 Sample Interaction
-User: Hello  
-Bot: Hello! Welcome to the AI Registration Assistant  
+## 📸 Screenshots
 
-User: Register  
-Bot: Please provide your full name  
+### 🏠 Home Screen
+![Home](home.png)
 
-User: My name is Rahul  
-Bot: Please provide your email  
+### 📝 Registration Start
+![Register](register.png)
+
+### 📧 User Details Input
+![Details](details.png)
+
+### 📊 More Details
+![Details2](details2.png)
+
+### ✅ Confirmation Step
+![Confirmation](confirmation.png)
+
+### 🎉 Registration Completed
+![Final](registration%20confirmed.png)
+
+---
 
 ## 📌 Task Details
-- Task ID: AI-SS-001  
-- Domain: NLP & Chatbot  
-- Internship: AI & Data Science  
+
+- **Task Name:** AI Registration Assistant  
+- **Task ID:** AI-SS-001  
+- **Type:** Internship Assignment  
+- **Objective:** Build an AI chatbot for internship registration  
+
+---
 
 ## 👨‍💻 Author
-Prasanna Tudu  
+
+**Prasanna Tudu**
