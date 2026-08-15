@@ -1,10 +1,10 @@
-# 🤖 AI Registration Assistant
+#  AI Registration Assistant
 
 An AI-powered chatbot that helps users complete internship registration through a conversational interface.
 
 ---
 
-## 📌 Features
+##  Features
 
 - Interactive chatbot UI
 - Step-by-step registration flow
@@ -15,7 +15,7 @@ An AI-powered chatbot that helps users complete internship registration through 
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python
 - Flask
@@ -24,7 +24,7 @@ An AI-powered chatbot that helps users complete internship registration through 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 AI-Registration-Assistant/
@@ -41,7 +41,7 @@ AI-Registration-Assistant/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Install dependencies:
 ```
@@ -60,29 +60,29 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🏠 Home Screen
+###  Home Screen
 ![Home](home.png)
 
-### 📝 Registration Start
+###  Registration Start
 ![Register](register.png)
 
-### 📧 User Details Input
+###  User Details Input
 ![Details](details.png)
 
-### 📊 More Details
+###  More Details
 ![Details2](details2.png)
 
-### ✅ Confirmation Step
+###  Confirmation Step
 ![Confirmation](confirmation.png)
 
-### 🎉 Registration Completed
+###  Registration Completed
 ![Final](registration%20confirmed.png)
 
 ---
 
-## 📌 Task Details
+##  Task Details
 
 - **Task Name:** AI Registration Assistant  
 - **Task ID:** AI-SS-001  
@@ -91,6 +91,6 @@ http://127.0.0.1:5000/
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Prasanna Tudu**
